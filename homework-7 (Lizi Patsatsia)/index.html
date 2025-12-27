@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terminal X-Omega | Intergalactic Spaceport</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <div class="warp-overlay"></div>
+
+        <div class="header-content">
+            <h1>TERMINAL X-OMEGA</h1>
+            <p>GATEWAY TO THE OUTER RIM SECTOR.</p>
+        </div>
+
+        <div class="status-bar">
+            <span>SYSTEM: ONLINE</span>
+            <span class="blink">TRAFFIC: HEAVY</span>
+            <span>TEMP: -270°C</span>
+        </div>
+    </header>
+
+    <main>
+        <section id="destinations">
+            <h2>POPULAR FLIGHT PATHS</h2>
+            <div class="grid-wrapper">
+
+                <article>
+                    <figure>
+                        <img src="../assets/dest_kepler.jpeg" alt="Kepler">
+                        <figcaption>
+                            <h3>Kepler-186f</h3>
+                            <p>
+                                Kepler-186f is a super Earth exoplanet that orbits an M-type star. It's discovery was announced in 2014.
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <div class="card-details">
+                        <span>Class: Habitable</span>
+                        <button>BOOK PASSAGE</button>
+                    <div>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="../assets/dest_titan.jpeg" alt="Titan">
+                        <figcaption>
+                            <h3>Titan Station</h3>
+                            <p>
+                                Titan Station, known informally as the Sprawl, is an EarthGov space station built into and around the last remaining fragment of Titan.
+                            </p>
+                        </figcaption>
+                    </figure>
+                     <div class="card-details">
+                        <span>Class: Industrial</span>
+                        <button>BOOK PASSAGE</button>
+                    </div>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="../assets/dest_nebula.jpeg" alt="Nebula">
+                        <figcaption>
+                            <h3>Nebula Resort</h3>
+                            <p>
+                                The Nebula is a ten-story hotel located near the Liston Spaceport on the galactic capital planet Coruscant.
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <div class="card-details">
+                        <span>Class: Luxury</span>
+                        <button>BOOK PASSAGE</button>
+                    </div>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="../assets/dest_blackhole.jpeg" alt="Black hole">
+                        <figcaption>
+                            <h3>Event Horizon</h3>
+                            <p>
+                                Black hole's surface. Whatever passes into the event horizon is doomed to stay inside it – even light.
+                            </p>
+                        </figcaption>
+                    </figure>
+                    <div class="card-details">
+                        <span>Class: Extreme</span>
+                        <button>BOOK PASSAGE</button>
+                    </div>
+                </article>
+        </section>
+
+        <section id="schedule">
+            <div class="hologram-overlay">
+                <h2>LIVE DEPARTURE BOARD</h2>
+
+                <table>
+                    <caption>REAL-TIME WARP GATE STATUS</caption>
+                    <thead>
+                        <tr>
+                            <th>Flight</th>
+                            <th>Destination</th>
+                            <th>Gate</th>
+                            <th>Time</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>XO-99</td>
+                            <td>Proxima Centauri</td>
+                            <td>A-12</td>
+                            <td>08:00</td>
+                            <td class="status-go">Boarding</td>
+                        </tr>
+
+                        <tr>
+                            <td>TR-45</td>
+                            <td>Titan Station</td>
+                            <td>B-04</td>
+                            <td>08:15</td>
+                            <td class="status-wait">Fueling</td>
+                        </tr>
+
+                        <tr>
+                            <td>GL-88</td>
+                            <td>Andromeda</td>
+                            <td>X-01</td>
+                            <td>09:30</td>
+                            <td class="status-delay">Delayed</td>
+                        </tr>
+
+                        <tr>
+                            <td>KP-12</td>
+                            <td>Kepler-186f</td>
+                            <td>C-09</td>
+                            <td>10:00</td>
+                            <td class="status-go">On Time</td>
+                        </tr>
+
+                        <tr>
+                            <td>VOID-0</td>
+                            <td>Uknown Sector</td>
+                            <td>???</td>
+                            <td>--:--</td>
+                            <td class="status-stop">Cancelled</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">SCANNING FOR INCOMING VESSELS...</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section id="booking">
+            <div class="kiosk-interface">
+                <h2>SELF-SERVICE TERMINAL</h2>
+                <form action="#" method="POST">
+                    <fieldset>
+                        <legend>IDENTITY VERIFICATION</legend>
+                        <label for="designation">Full Designation</label>
+                        <input type="text" id="designation" name="designation">
+
+                        <label for="id-code">ID Code</label>
+                        <input type="text" id="id-code" name="id-code">
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>FLIGHT PARAMETERS</legend>
+                        <label for="destination">Choose Destination</label>
+                        <input list="planets" id="destination" name="planets" placeholder="Select Destination">
+                        <datalist id="planets">
+                            <option value="Kepler-186f">Kepler-186f</option>
+                            <option value="Titan Station">Titan Station</option>
+                            <option value="Nebula Resort">Nebula Resort</option>
+                            <option value="Event Horizon">Event Horizon</option>
+                        </datalist>
+
+                        <label for="class">Cabin Class</label>
+                        <select id="class" name="cabin-class">
+                            <option value="eco">Economy (Stasis Pod)</option>
+                            <option value="business">Business (Quarters)</option>
+                            <option value="first">First (Zero-G Suite)</option>
+                        </select>
+                    </fieldset>
+                    <button type="submit">AUTHORIZE CREDIT TRANSFER</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>TERMINAL X-OMEGA // OPERATED BY GALACTIC FEDERATION // SAFETY NOT GUARANTEED.</p>
+    </footer>
+</body>
+</html>
